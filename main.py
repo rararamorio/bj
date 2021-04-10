@@ -145,6 +145,7 @@ class BJ:
 
     def judge(self):
         # ディーラーの結果
+        self.display(self.dealer, False)
         dc = self.bj_calc(self.dealer.get_trumps())
         if dc == 21:
             print('ブラックジャックでディーラーの勝利')
@@ -158,7 +159,6 @@ class BJ:
             if calc == 21:
                 print('ブラックジャックで勝利')
             elif calc < 21:
-                self.display(person, False)
                 if dc > 21:
                     print(f'{calc} 点で勝利')
                 elif calc > dc:
